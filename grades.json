@@ -1,0 +1,13 @@
+{
+    "email": "swang10@berkeley.edu", 
+    "grades": {
+        "lab1": {
+            "earned": 12, 
+            "possible": 12
+        }
+    }, 
+    "id": "24070518", 
+    "login": "wsy1607", 
+    "name": "Shengying Wang", 
+    "url": "git@github.com:wsy1607/stat133.git"
+}
