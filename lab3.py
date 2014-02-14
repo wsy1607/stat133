@@ -346,9 +346,6 @@ def get_codons(dna):
     else:
 		print "Error: the string is not a multiple of 3."
 	
-	
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+
 
 
