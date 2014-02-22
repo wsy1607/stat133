@@ -96,7 +96,14 @@ class Cipher(object):
         """
         The constructor method.
         """
-        return NotImplemented
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	if mapping == 'reverse':
+		self.key = alphabet[::-1]
+	elif mapping == 'rot13':
+		self.key = alphabet[13:26:1] + alphabet[0:13:1]
+	elif mapping == 'hybrid':
+		self.key = (alphabet + alphabet)[39:13:-1] 
+#        return
 
     def isvalid(self, message):
         """
@@ -113,7 +120,13 @@ class Cipher(object):
             Returns True, if message is only composed of letters
             in our alphabet (and False otherwise).
         """
-        return NotImplemented
+	for check in message:
+		if check not in list(string.ascii_lowercase):
+			bo = False
+			break
+		else:
+			bo = True
+        return bo
 
     def encrypt(self, message):
         """
@@ -128,7 +141,10 @@ class Cipher(object):
         -------
         out : string
         """
-        return NotImplemented
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	translator = string.maketrans(alphabet, self.key)
+	encrypt = message.translate(translator)
+        return encrypt
   
     def decrypt(self, message):
         """
@@ -143,7 +159,11 @@ class Cipher(object):
         -------
         out : string
         """
-        return NotImplemented
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	translator = string.maketrans(alphabet, self.key)
+	decrypt = message.translate(translator)
+#	decrypt = encrypt.translate(translator)
+        return decrypt
 
 if __name__ == "__main__":
     import doctest
