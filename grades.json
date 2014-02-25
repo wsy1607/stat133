@@ -12,9 +12,12 @@
         "lab3": {
             "earned": 30, 
             "possible": 30
+        }, 
+        "lab4": {
+            "earned": 30, 
+            "possible": 30
         }
     }, 
-    "id": "24070518", 
     "login": "wsy1607", 
     "name": "Shengying Wang", 
     "url": "git@github.com:wsy1607/stat133.git"
