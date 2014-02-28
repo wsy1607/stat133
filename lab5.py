@@ -36,7 +36,11 @@ def simulate_grades(class_size, max_scores=[100,100,100]):
     >>> simulate_grades(250, [100, 100, 100]).min() > 0
     True
     """
-    return NotImplemented
+    a = []
+    for i in range(len(max_scores)):
+        a.append(rand(class_size)*max_scores[i])
+
+    return array(a).reshape(class_size,len(max_scores))
 
 
 
@@ -70,7 +74,13 @@ def simulate_grade_df(class_size, grade_items={'F':100,'M':100,'HW':10}):
     >>> simulate_grade_df(4,{'M':5,'F':5,'HW':5}).shape == (4,3)
     True
     """
-    return NotImplemented 
+    df1 = DataFrame(grade_items)
+    a = []
+    for i in range(len(max_scores)):
+        a.append(rand(class_size)*df1[i])
+
+    b = DataFrame(array(a).reshape(class_size,len(grade_items.values())),columns = grade_item.keys)
+    return b
 
 
 
@@ -125,6 +135,10 @@ class GradeBook(object):
 	>>> a.max_scores[0] == 30
 	True
         """
+        self.raw_grades = DataFrame(grade_arr,index=student_ids,columns=item_list)
+        self.total_grades = None
+        self.letter_grades = None
+        self.max_scores = max_scores
         pass
 
 
