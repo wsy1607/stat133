@@ -54,7 +54,10 @@ def simulate_grades(class_size, max_scores=[100,100,100]):
     >>> g[:,2].max() < 40
     True
     """
-    return NotImplemented
+    a = []
+    for i in range(len(max_scores)):
+        a.append(rand(class_size)*max_scores[i])
+    return array(a).transpose().reshape(class_size,len(max_scores))
 
 
 
@@ -88,7 +91,11 @@ def simulate_grade_df(class_size, grade_items={'F':100,'M':100,'HW':10}):
     >>> simulate_grade_df(4,{'M':5,'F':5,'HW':5}).shape == (4,3)
     True
     """
-    return NotImplemented
+    a = []
+    for i in range(len(grade_items)):
+        a.append(rand(class_size)*grade_items.values()[i])
+    b = array(a).transpose().reshape(class_size,len(grade_items))
+    return DataFrame(b,columns = grade_items.keys())
 
 
 
@@ -143,7 +150,11 @@ class GradeBook(object):
         >>> a.max_scores[0] == 30
         True
         """
-        return NotImplemented
+        self.raw_grades = DataFrame(grade_arr,index=student_ids,columns=item_list)
+        self.total_grades = None
+        self.letter_grades = None
+        self.max_scores = max_scores
+        pass
 
     def compute_total_grades(self, item_weights=None, max_score=100):
         """
@@ -181,7 +192,14 @@ class GradeBook(object):
         >>> a.total_grades['34'] == 10
         True
         """
-        return NotImplemented
+        a = 0
+        for i in range(len(item_weights)):
+            a = a + self.raw_grades.ix[:,i]*item_weights[i]
+        k = 0
+        for i in range(len(self.max_scores)):
+            k = k + self.max_scores[i]*item_weights[i]
+        self.total_grades = a*max_score/k
+        return self.total_grades
 
 
 
