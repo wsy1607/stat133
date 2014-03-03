@@ -53,9 +53,12 @@ def decision_rule(x, y, z):
     >>> decision_rule(False, False, False)
     False
     """
-    
+    if (x and y) or z:
+        b = True
+    else:
+        b = False
      
-    return NotImplemented 
+    return b 
 
 
 #---------------------------------------------------------------------------
@@ -86,8 +89,14 @@ def compare_string_length(x, y):
     >>> compare_string_length(True, 1)
     -1
     """
-
-    return NotImplemented        
+    x = str(x)
+    y = str(y)
+    if len(y) > len(x):
+        return 1
+    elif len(y) == len(x):
+        return 0
+    else:
+        return -1      
 
 
 #---------------------------------------------------------------------------
@@ -115,8 +124,9 @@ def compute_grade(grades, k):
     >>> compute_grade([1,2,3,4], 3)
     4.0
     """
-    
-    return NotImplemented
+    new_grades = [sorted(grades)[i] for i in range(k,len(grades))]
+    import numpy as np
+    return np.mean(new_grades)
     
 
 #---------------------------------------------------------------------------
@@ -174,8 +184,16 @@ class DNA(object):
         >>> DNA('AGTCCACCCTAAACTCCACAG' * 4).to_protein()
         'spp-tpqspp-tpqspp-tpqspp-tpq'
         """
-        
-        return NotImplemented
+        #define a list to store dna in a group of 3
+        a = []
+        for i in range(0,len(self.dna),3):
+            a.append(self.dna[i:i+3])
+        #define a string to store the protein
+        b = ''
+        for j in range(len(a)):
+            b = b + self.codon2amino[a[j]]
+        self.protein = b
+        return self.protein
         
 
 
@@ -196,6 +214,8 @@ class DNA(object):
         'AGG':'r', 'CCT':'p', 'AGC':'s', 'AGA':'r', 'CAT':'h', 'AAT':'n', 
         'ATT':'i', 'CTG':'l', 'CTA':'l', 'CTC':'l', 'CAC':'h', 'CCG':'p', 
         'AGT':'s', 'CCA':'p', 'CCC':'p', 'TAA':'-'}
+
+#        self.protein = DNA.to_protein()
 
 
     
