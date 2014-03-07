@@ -11,14 +11,36 @@
         }, 
         "lab3": {
             "earned": 30, 
+            "hash": "f0cebf1acee2d3703d3042001a7079b786e95dda", 
+            "note": "", 
+            "penalty": 0, 
             "possible": 30
         }, 
         "lab4": {
             "earned": 30, 
+            "hash": "f0cebf1acee2d3703d3042001a7079b786e95dda", 
+            "note": "", 
+            "penalty": 0, 
             "possible": 30
+        }, 
+        "lab5": {
+            "earned": 28, 
+            "hash": "f0cebf1acee2d3703d3042001a7079b786e95dda", 
+            "note": "", 
+            "penalty": 0, 
+            "possible": 30
+        }, 
+        "midterm": {
+            "earned": 40, 
+            "hash": "f0cebf1acee2d3703d3042001a7079b786e95dda", 
+            "note": "", 
+            "penalty": 0, 
+            "possible": 40
         }
     }, 
+    "lab": 3, 
     "login": "wsy1607", 
     "name": "Shengying Wang", 
+    "status": "enrolled", 
     "url": "git@github.com:wsy1607/stat133.git"
 }

@@ -1,0 +1,262 @@
+INFO:root:(8 points) os.path.isfile("lab4.py") is True
+INFO:root:Executed rev = m.Cipher("reverse")
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 54, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+TypeError: __init__() should return None, not 'NotImplementedType'
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 54, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+TypeError: __init__() should return None, not 'NotImplementedType'
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 54, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+TypeError: __init__() should return None, not 'NotImplementedType'
+ERROR:root:(2 points) Checking rev.encrypt("testcase")
+ERROR:root:... Expecting: gvhgxzhv
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+ERROR:root:(2 points) Checking rev.decrypt("testcase")
+ERROR:root:... Expecting: gvhgxzhv
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+ERROR:root:(2 points) Checking rev.isvalid("testcase")
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+ERROR:root:(2 points) Checking rev.isvalid("123")
+ERROR:root:... Expecting: False
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+ERROR:root:(2 points) Checking rev.isvalid("TestCase")
+ERROR:root:... Expecting: False
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rev' is not defined
+INFO:root:Executed rot = m.Cipher("rot13")
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 54, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+TypeError: __init__() should return None, not 'NotImplementedType'
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 54, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+TypeError: __init__() should return None, not 'NotImplementedType'
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 54, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+TypeError: __init__() should return None, not 'NotImplementedType'
+ERROR:root:(2 points) Checking rot.encrypt("testcase")
+ERROR:root:... Expecting: grfgpnfr
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rot' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rot' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rot' is not defined
+ERROR:root:(2 points) Checking rot.decrypt("testcase")
+ERROR:root:... Expecting: grfgpnfr
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rot' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rot' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rot' is not defined
+ERROR:root:(2 points) Checking rot.isvalid("testcase")
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rot' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rot' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'rot' is not defined
+INFO:root:Executed hyb = m.Cipher("hybrid")
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 54, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+TypeError: __init__() should return None, not 'NotImplementedType'
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 54, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+TypeError: __init__() should return None, not 'NotImplementedType'
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 54, in run
+    exec(command, g)
+  File "<string>", line 1, in <module>
+TypeError: __init__() should return None, not 'NotImplementedType'
+ERROR:root:(2 points) Checking hyb.encrypt("testcase")
+ERROR:root:... Expecting: ujvulnvj
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'hyb' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'hyb' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'hyb' is not defined
+ERROR:root:(2 points) Checking hyb.decrypt("testcase")
+ERROR:root:... Expecting: ujvulnvj
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'hyb' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'hyb' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'hyb' is not defined
+ERROR:root:(2 points) Checking hyb.isvalid("testcase")
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'hyb' is not defined
+ERROR:root:Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'hyb' is not defined
+Traceback (most recent call last):
+  File "/home/grader/grade/133/wsy1607/check.py", line 70, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+NameError: name 'hyb' is not defined
+INFO:root:You got a 30 out of 30.

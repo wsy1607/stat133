@@ -1,0 +1,38 @@
+INFO:root:(2 points) os.path.isfile("lab3.py") is True
+ERROR:root:(2 points) Checking m.reverse("ATGATT")
+ERROR:root:... Expecting: TTAGTA
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(2 points) Checking m.is_dna("ANT")
+ERROR:root:... Expecting: False
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(2 points) Checking m.is_dna("ATT")
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(2 points) Checking m.is_rna("AU")
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(2 points) Checking m.is_rna("AT")
+ERROR:root:... Expecting: False
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(2 points) Checking m.reverse("ATC")
+ERROR:root:... Expecting: CTA
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(2 points) Checking m.transcribe("ATCGTC")
+ERROR:root:... Expecting: AUCGUC
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(2 points) Checking m.complement("ATCGGA")
+ERROR:root:... Expecting: TAGCCT
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(2 points) Checking m.is_complement("TAGCCT", "ATCGGA")
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(2 points) Checking m.reversecomplement("ATGCAA")
+ERROR:root:... Expecting: TTGCAT
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(4 points) Checking m.gc_content("ACAAGGGCT")
+ERROR:root:... Expecting: 0.555555555556
+ERROR:root:... But got:   NotImplemented
+ERROR:root:(4 points) Checking m.get_codons("ATGCCC")
+ERROR:root:... Expecting: ['ATG', 'CCC']
+ERROR:root:... But got:   NotImplemented
+INFO:root:You got a 30 out of 30.
