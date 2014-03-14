@@ -36,8 +36,12 @@ createVector1  = function(n) {
     # Implement this function body so that it returns
     # the vector (1,..., n-1, n, n-1, n-2, ..., 1), where n is 
     # a natural number (1,2,3,...) passed as the function argument.
-
-    "NotImplemented"
+    v <- c(1:n,(n-1):1)
+    if (n ==1 ){
+        return(1)
+    }else{
+        return(v)
+    }
 }
 
 tryCatch ( checkEquals(createVector1(3), c(1,2,3,2,1)), 
@@ -59,8 +63,8 @@ createVector2  = function(a,b,c,k,l,m) {
     # the vector (a,a,...,a,b,b,...,b,c,c,...c), where a is
     # repeated k times, b is repeated l times, and c is repeated 
     # m times. 
-
-    "NotImplemented"
+    v <- c(rep(a,k),rep(b,l),rep(c,m))
+    return(v)
 }
 
 # Tests:
@@ -101,8 +105,8 @@ createVector3  = function(label, n) {
     # Implement this function body so that it returns
     # the character vector (label 1, label 2, ..., label n), where
     # label is a string and n is an integer.
-
-    "NotImplemented"
+    v <- paste(label, 1:n)
+    return(v)
 }
 
 # Tests:
@@ -145,8 +149,8 @@ createVector4  = function(a, b, s) {
     # the numeric vector 
     # (exp(a)cos(a), exp(a+s)cos(a+s), exp(a+2s)cos(a+2s),...,exp(a+ns)cos(a+ns))
     #    where a < b, a+ns <= b, and a+(n+1)s > b
-    
-    "NotImplemented"
+    v <- seq(a,b,s)
+    return(exp(v)*cos(v))
 }
 
 # Tests:
