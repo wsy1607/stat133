@@ -32,7 +32,7 @@
         }, 
         "lab7": {
             "earned": 30, 
-            "hash": "9a4a9ffb959027ec3f16b01bab96c405168fa969", 
+            "hash": "1e6119761b454d08bc6a7f384bd3ae80eaa71674", 
             "note": "", 
             "penalty": 0, 
             "possible": 30
@@ -45,7 +45,7 @@
             "possible": 40
         }
     }, 
-    "lab": 3, 
+    "lab": "3", 
     "login": "wsy1607", 
     "name": "Shengying Wang", 
     "status": "enrolled", 
