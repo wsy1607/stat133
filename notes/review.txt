@@ -1,0 +1,143 @@
+review:
+
+
+General topic:
+
+x = rep(c(4,6,3), c(10, 20, 30))
+
+x = paste(c('X', 'Y', 'Z'), c(1,2,3), sep='')
+
+y = sample(c('Bob', 'Luc', 'Martin'), 100, replace=T, prob=c(0.2, 0.5, 0.3))
+
+round(x, digits=n)
+%% (modulo)   %/% (integer division)  
+any(x) (returns true if any of the elemenst in x is true, otherwise false)
+all(x) (returns true if all the elements in x are true, otherwise false)
+& (and)   | (or)   ! (not)
+
+f = function(a) return(c(a, a^2, a^3))
+M = sapply(x, f)
+
+A = matrix(1:9, ncol=3)
+row.sum = apply(A, 1, sum)
+col.sum = apply(A, 2, sum)
+
+x = 1/2^(1:200)
+i = 1:199
+result = sum(exp(-x[i+1])/(x[i] + 10)); print(result)
+
+
+
+OOP:
+
+bankAccount = function(holderName, checking, saving)
+{
+    object = list(holderName=holderName, checking=checking, saving=saving)
+    class(object) = 'bankAccount'
+    return(object)
+}
+
+BobAccount = bankAccount(holderName='Bob Durant', checking=12, saving=0)
+
+display.bankAccount = function(object)
+{
+    cat('Account holder', object$holderName, 'has', object$checking,
+        'dollars in checking and', object$saving, 'dollars in saving.') 
+}
+
+display = function(object)
+{
+    UseMethod('display', object)
+}
+
+
+Practice problems:
+
+C = letters[-grep('a|e|i|o|u', letters)]
+I = toupper(C)
+
+as.data.frame.addressBook = function(object)
+{
+    getField = function(field) 
+    {
+        sapply(object$contacts, function(contact) contact[[field]]
+    )
+    df = as.data.frame(lapply(object$fields, getField))
+    colnames(df) = object$fields
+    return(df)
+}
+
+info = c('Bob Durant 56years bob@bibishop.com',
+         'Dan Bribri 10years 415 7838',
+         'Brig Farty 38years 510 3478',
+         'Cart Shuok 34years Cart@RATROU.com',
+         'Krug Erbil 54years Cart@RATROU.com 510 230 450')
+getName  = function(info) sub('[0-9]{2}years.*', '', info)
+getPhone = function(info) sub('^[^0-9 ]*', '', sub('^.*years *', '', info))
+getEmail = function(info) sub('[ 0-9]*$', '', sub('^.*years *', '', info))
+getAge   = function(info) as.numeric(sub('years.*', '', sub('^[^0-9]+', '', info)))
+
+grades = sapply(1:length(col.names), 
+                function(x) rnorm(student.number, mean=50, sd=30)
+                )
+
+
+Data gathering:
+
+xml_doc = xmlParse('stat133.xml')
+stat133_node = xmlRoot(xml_doc)
+stat133_attrs = xmlAttrs(stat133_node) 
+print(stat133_attrs)
+stat133_children = xmlChildren(stat133_node) # return chi
+student1_node = stat133_children[[1]]
+student2_node = stat133_children[[2]]
+parent_node = xmlParent(student1_node)
+for (student in xmlChildren(stat133_node))
+{
+    for(node in xmlChildren(student)) print(xmlValue(node))
+}
+
+get_value = function(node, tag) return(xmlValue(node[[tag]]))
+g = function(tag, student_nodes) return(sapply(student_nodes, get_value, tag))
+tag_names = names(students[[1]])
+data = lapply(tag_names, g, students)
+df = data.frame(data)
+
+Data cleaning:
+
+%d (day number)
+%m (month in decimal)
+%B (month in letter)
+%b (in abreviated)
+%y (year: two digits)
+%Y (year: four digits)
+a = as.Date('December 18, 2009', '%B %d, %Y')
+
+   .    means "any character"
+ [...]  means "any character enclosed between the brackets"
+ [^...] means "any character not enclosed between the brackets"
+ *      means "the previous character or group occurs zero or many times"
+ +      means "the previous character or group occurs one or many times"
+ ?      means "the previous character or group occurs zero or one time"
+ {n,m}  means "the previous character or group occurs between n or m times"
+ {n}    means "the previous character or group occurs exactly n times"
+ \      escape special characters
+ ^ means "at the beginning of the line"
+ $ means "at the end of the line"
+
+Clustering:
+
+major.names  = c('ECON', 'STAT', 'MATH', 'LITT')
+M = factor(sample(major.names, student.number, replace=T))
+clusters = lapply(levels(M), function(major) names(M[M==major]))
+names(clusters) = levels(M)
+stripchart(scores, method='stack', xlab='Student scores', main='Stacked stripchart of student grades')
+
+fit = kmeans(scores, 4)
+plot(scores, rep(1.1, length(scores)), type='n', yaxt='n', xlab='', ylab='')
+colors = c('red', 'blue', 'purple', 'orange')[fit$cluster]
+
+D = dist(scores, method='euclidean')
+hfit = hclust(D)
+plot(hfit, gradeBook$Major)
+rect.hclust(hfit, k=4, border="orange")
