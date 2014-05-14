@@ -69,7 +69,16 @@ for (i in 1:ncol(data)){
       }
    }
 }
-object <- list(rawData = data,thresholds = c(naRow,naCol),badRows=which(rowsNA>naRow),badCols=which(colsNA>naCol),outliers = outindex,cleanData=data)
+#clean data
+allindex <- 0
+for (i in 1:length(outindex)){
+   allindex[i] <- outindex[[i]][1]
+}
+colstoremove <- which(colsNA>naCol)[[1]]
+rowstoremove <- as.numeric(levels(factor(c(which(rowsNA>naRow),allindex))))
+newdata <- data[-rowstoremove,-colstoremove]
+rownames(newdata) <- 1:nrow(newdata)
+object <- list(rawData = data,thresholds = c(naRow,naCol),badRows=which(rowsNA>naRow),badCols=which(colsNA>naCol)[[1]],outliers = outindex,cleanData=newdata)
 class(object) = 'dfDiagnosis'
 return(object)
 

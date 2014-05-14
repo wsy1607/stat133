@@ -59,8 +59,8 @@ datamax <- datamedian + 1.5*dataQR
 datamin <- datamedian - 1.5*dataQR
 outindex <- list()
 k = 1
-for (i in 1:ncol(data)){
-   for (j in 1:nrow(data)){
+for (j in 1:nrow(data)){
+   for (i in 1:ncol(data)){
       if(is.na(data[j,i])==F){
       if(data[j,i] > datamax[i]|data[j,i] < datamin[i]){
       outindex[[k]] <- c(j,i)
@@ -69,7 +69,16 @@ for (i in 1:ncol(data)){
       }
    }
 }
-object <- list(rawData = data,thresholds = c(naRow,naCol),badRows=which(rowsNA>naRow),badCols=which(colsNA>naCol)[[1]],outliers = outindex,cleanData=data)
+#clean data
+allindex <- 0
+for (i in 1:length(outindex)){
+   allindex[i] <- outindex[[i]][1]
+}
+colstoremove <- which(colsNA>naCol)[[1]]
+rowstoremove <- as.numeric(levels(factor(c(which(rowsNA>naRow),allindex))))
+newdata <- data[-rowstoremove,-colstoremove]
+rownames(newdata) <- 1:nrow(newdata)
+object <- list(rawData = data,thresholds = c(naRow,naCol),badRows=which(rowsNA>naRow),badCols=which(colsNA>naCol)[[1]],outliers = outindex,cleanData=newdata)
 class(object) = 'dfDiagnosis'
 return(object)
 
